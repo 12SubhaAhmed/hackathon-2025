@@ -6,19 +6,19 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #1976D2; /* A shade of blue */
-  --ifm-color-primary-dark: #1565C0;
-  --ifm-color-primary-darker: #145DAF;
-  --ifm-color-primary-darkest: #0F478B;
-  --ifm-color-primary-light: #42A5F5;
-  --ifm-color-primary-lighter: #64B5F6;
-  --ifm-color-primary-lightest: #90CAF9;
+  --ifm-color-primary: #00c6ff;
+  --ifm-color-primary-dark: #00B2E5;
+  --ifm-color-primary-darker: #009ECC;
+  --ifm-color-primary-darkest: #008AB2;
+  --ifm-color-primary-light: #19CBFF;
+  --ifm-color-primary-lighter: #33D1FF;
+  --ifm-color-primary-lightest: #4CD7FF;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
   /* Custom variables for homepage */
-  --homepage-hero-bg-start: #6b1b67; /* Dark gradient start */
-  --homepage-hero-bg-end: #1835db;   /* Dark gradient end */
+  --homepage-hero-bg-start: #0f0c29;
+  --homepage-hero-bg-end: #302b63;
   --homepage-card-shadow: rgba(0, 0, 0, 0.1);
   --homepage-card-shadow-hover: rgba(0, 0, 0, 0.2);
 }
@@ -42,6 +42,12 @@
 }
 
 /* Custom styles for homepage */
+
+.homepage-hero .row {
+  display: flex;
+  align-items: center;
+}
+
 .homepage-hero {
   background: linear-gradient(45deg, var(--homepage-hero-bg-start), var(--homepage-hero-bg-end));
   color: white;
@@ -49,7 +55,7 @@
 }
 
 .homepage-hero .hero__title {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
   color: white; /* Ensure title is white */
@@ -67,7 +73,7 @@
 }
 
 .homepage-hero .hero-emoji {
-  font-size: 3.5rem; /* Match title size */
+  font-size: 3rem; /* Match title size */
   margin: 0 10px;
 }
 
@@ -78,17 +84,18 @@
 
 .homepage-hero .button--secondary {
   background-color: white;
-  color: var(--ifm-color-primary);
   border: 1px solid white;
   font-weight: 600;
-  padding: 1rem 2rem;
+  padding: 8px 16px;
+  padding-top: 16px;
+  margin: 8px;
   font-size: 1.1rem;
   border-radius: 8px;
   transition: all 0.3s ease;
 }
 
 .homepage-hero .button--secondary:hover {
-  background-color: var(--ifm-color-primary-lightest);
+  background-color: #302b63;
   color: white;
   border-color: var(--ifm-color-primary-lightest);
   box-shadow: 0 4px 15px var(--homepage-card-shadow-hover);
@@ -152,9 +159,13 @@
   box-shadow: 0 8px 25px var(--homepage-card-shadow-hover);
 }
 
+.chapter-card h3 a {
+  color: #302b63;
+}
+
 .chapter-card h3 {
   font-size: 1.6rem;
-  color: var(--ifm-color-primary);
+  color: #302b63;
   margin-bottom: 0.8rem;
   line-height: 1.3;
 }
@@ -169,7 +180,7 @@
 
 .chapter-card .chapter-link {
   display: inline-block;
-  background-color: var(--ifm-color-primary);
+  background-color: #302b63;
   color: white;
   padding: 0.7rem 1.5rem;
   border-radius: 6px;

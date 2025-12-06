@@ -8,18 +8,21 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 <header className="hero hero--primary homepage-hero">
   <div className="container">
     <div className="row">
-      <div className="col col--8 col--offset-2">
+      <div className="col col--6">
+        <img src={useBaseUrl('/img/gemini-hero.png')} alt="Book Cover" />
+      </div>
+      <div className="col col--6">
         <h1 className="hero__title">
-          <span className="hero-emoji">🤖</span> Humanoid Robotics & Physical AI <span className="hero-emoji">🦾</span>
+          Physical AI & Humanoid Robotics
         </h1>
         <p className="hero__subtitle">
-          Unlock the Future: Exploring the Fusion of AI and Embodied Robotics
+          Colearning Agentic AI with Python and TypeScript – Spec Driven Reusable Intelligence
         </p>
         <div className="hero-buttons">
           <a
             className="button button--secondary button--lg"
             href={useBaseUrl('/docs/chapter-1/lesson-1')}>
-            Start Your Journey ✨
+            Start Reading
           </a>
         </div>
       </div>
