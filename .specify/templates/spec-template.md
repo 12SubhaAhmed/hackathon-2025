@@ -1,115 +1,58 @@
 # Feature Specification: [FEATURE NAME]
 
-**Feature Branch**: `[###-feature-name]`  
-**Created**: [DATE]  
-**Status**: Draft  
+**Feature Branch**: `[###-feature-name]`
+**Created**: [DATE]
+**Status**: Draft
 **Input**: User description: "$ARGUMENTS"
 
-## User Scenarios & Testing *(mandatory)*
+## Chapter/Lesson Goals *(mandatory)*
 
-<!--
-  IMPORTANT: User stories should be PRIORITIZED as user journeys ordered by importance.
-  Each user story/journey must be INDEPENDENTLY TESTABLE - meaning if you implement just ONE of them,
-  you should still have a viable MVP (Minimum Viable Product) that delivers value.
-  
-  Assign priorities (P1, P2, P3, etc.) to each story, where P1 is the most critical.
-  Think of each story as a standalone slice of functionality that can be:
-  - Developed independently
-  - Tested independently
-  - Deployed independently
-  - Demonstrated to users independently
--->
+### Goal 1 - [Brief Title] (Priority: P1)
 
-### User Story 1 - [Brief Title] (Priority: P1)
-
-[Describe this user journey in plain language]
+[Describe the goal of this chapter or lesson]
 
 **Why this priority**: [Explain the value and why it has this priority level]
 
-**Independent Test**: [Describe how this can be tested independently - e.g., "Can be fully tested by [specific action] and delivers [specific value]"]
-
 **Acceptance Scenarios**:
 
-1. **Given** [initial state], **When** [action], **Then** [expected outcome]
-2. **Given** [initial state], **When** [action], **Then** [expected outcome]
+1.  **Given** [initial state], **When** [content is created], **Then** [expected outcome]
+2.  **Given** [initial state], **When** [content is reviewed], **Then** [expected outcome]
 
 ---
 
-### User Story 2 - [Brief Title] (Priority: P2)
-
-[Describe this user journey in plain language]
-
-**Why this priority**: [Explain the value and why it has this priority level]
-
-**Independent Test**: [Describe how this can be tested independently]
-
-**Acceptance Scenarios**:
-
-1. **Given** [initial state], **When** [action], **Then** [expected outcome]
-
----
-
-### User Story 3 - [Brief Title] (Priority: P3)
-
-[Describe this user journey in plain language]
-
-**Why this priority**: [Explain the value and why it has this priority level]
-
-**Independent Test**: [Describe how this can be tested independently]
-
-**Acceptance Scenarios**:
-
-1. **Given** [initial state], **When** [action], **Then** [expected outcome]
-
----
-
-[Add more user stories as needed, each with an assigned priority]
+[Add more goals as needed, each with an assigned priority]
 
 ### Edge Cases
 
-<!--
-  ACTION REQUIRED: The content in this section represents placeholders.
-  Fill them out with the right edge cases.
--->
+-   What happens when [a concept is particularly complex]?
+-   How does the content handle [potential prerequisite knowledge gaps]?
 
-- What happens when [boundary condition]?
-- How does system handle [error scenario]?
+## Content Requirements *(mandatory)*
 
-## Requirements *(mandatory)*
+### Lesson Structure Requirements
 
-<!--
-  ACTION REQUIRED: The content in this section represents placeholders.
-  Fill them out with the right functional requirements.
--->
-
-### Functional Requirements
-
-- **FR-001**: System MUST [specific capability, e.g., "allow users to create accounts"]
-- **FR-002**: System MUST [specific capability, e.g., "validate email addresses"]  
-- **FR-003**: Users MUST be able to [key interaction, e.g., "reset their password"]
-- **FR-004**: System MUST [data requirement, e.g., "persist user preferences"]
-- **FR-005**: System MUST [behavior, e.g., "log all security events"]
+-   **LSR-001**: Each lesson MUST have a `Title`.
+-   **LSR-002**: Each lesson MUST have a one-line `Description`.
+-   **LSR-003**: Each lesson MUST have `Objectives`.
+-   **LSR-004**: Each lesson MUST have `Key Concepts`.
+-   **LSR-005**: Each lesson MUST have an `Explanation`.
+-   **LSR-006**: Each lesson MUST have an `Example`.
+-   **LSR-007**: Each lesson MUST have one `Exercise`.
 
 *Example of marking unclear requirements:*
 
-- **FR-006**: System MUST authenticate users via [NEEDS CLARIFICATION: auth method not specified - email/password, SSO, OAuth?]
-- **FR-007**: System MUST retain user data for [NEEDS CLARIFICATION: retention period not specified]
+-   **LSR-008**: The `Example` for [Lesson X] MUST be [NEEDS CLARIFICATION: specific example not defined].
 
-### Key Entities *(include if feature involves data)*
+### Key Concepts *(include if feature involves new concepts)*
 
-- **[Entity 1]**: [What it represents, key attributes without implementation]
-- **[Entity 2]**: [What it represents, relationships to other entities]
+-   **[Concept 1]**: [What it represents, key attributes]
+-   **[Concept 2]**: [What it represents, relationships to other concepts]
 
 ## Success Criteria *(mandatory)*
 
-<!--
-  ACTION REQUIRED: Define measurable success criteria.
-  These must be technology-agnostic and measurable.
--->
-
 ### Measurable Outcomes
 
-- **SC-001**: [Measurable metric, e.g., "Users can complete account creation in under 2 minutes"]
-- **SC-002**: [Measurable metric, e.g., "System handles 1000 concurrent users without degradation"]
-- **SC-003**: [User satisfaction metric, e.g., "90% of users successfully complete primary task on first attempt"]
-- **SC-004**: [Business metric, e.g., "Reduce support tickets related to [X] by 50%"]
+-   **SC-001**: [Measurable metric, e.g., "The content for each lesson is complete and adheres to the structure."]
+-   **SC-002**: [Measurable metric, e.g., "The examples are clear and effectively demonstrate the concepts."]
+-   **SC-003**: [User satisfaction metric, e.g., "90% of readers can complete the exercises successfully."]
+-   **SC-004**: [Business metric, e.g., "The book is successfully generated by Docusaurus with no errors."]

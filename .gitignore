@@ -1,0 +1,31 @@
+# Gitignore for Humanoid Robotics project
+
+# Node.js
+node_modules/
+dist/
+build/
+*.log
+.env*
+settings.json
+
+
+# Docusaurus build output
+docs/build/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Gemini CLI temporary files
+.gemini/tmp/
+
+# PowerShell
+*.psd1
+*.psm1
+
+# General
+*.tmp
+*.bak
+*.swp

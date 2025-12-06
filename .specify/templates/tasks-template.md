@@ -197,19 +197,87 @@ Examples of foundational tasks (adjust based on your project):
 
 ## Parallel Example: User Story 1
 
-```bash
-# Launch all tests for User Story 1 together (if tests requested):
-Task: "Contract test for [endpoint] in tests/contract/test_[name].py"
-Task: "Integration test for [user journey] in tests/integration/test_[name].py"
+---
 
-# Launch all models for User Story 1 together:
-Task: "Create [Entity1] model in src/models/[entity1].py"
-Task: "Create [Entity2] model in src/models/[entity2].py"
-```
+description: "Task list template for feature implementation"
+---
+
+# Tasks: [FEATURE NAME]
+
+**Input**: Design documents from `/specs/[###-feature-name]/`
+**Prerequisites**: plan.md (required), spec.md (required for goals)
+
+## Format: `[ID] [P?] [Chapter/Lesson] Description`
+
+-   **[P]**: Can run in parallel
+-   **[Chapter/Lesson]**: Which chapter/lesson this task belongs to (e.g., C1L1, C2L3)
+-   Include exact file paths in descriptions
+
+## Path Conventions
+
+-   Paths shown below assume the Docusaurus structure from plan.md
+
+---
+
+## Chapter 1: [Chapter 1 Title]
+
+### Lesson 1.1: [Lesson 1.1 Title]
+
+-   [ ] T001 [C1L1] Create `docs/chapter-1/lesson-1.md`
+-   [ ] T002 [C1L1] Write Title and Description
+-   [ ] T003 [C1L1] Define Objectives
+-   [ ] T004 [C1L1] List Key Concepts
+-   [ ] T005 [C1L1] Write Explanation
+-   [ ] T006 [C1L1] Create Example
+-   [ ] T007 [C1L1] Write Exercise
+
+### Lesson 1.2: [Lesson 1.2 Title]
+
+-   [ ] T008 [C1L2] Create `docs/chapter-1/lesson-2.md`
+-   [ ] T009 [C1L2] Write Title and Description
+-   ...
+
+---
+
+## Chapter 2: [Chapter 2 Title]
+
+### Lesson 2.1: [Lesson 2.1 Title]
+
+-   [ ] T... [C2L1] Create `docs/chapter-2/lesson-1.md`
+-   ...
+
+---
+
+[Add more chapters and lessons as needed]
+
+## Dependencies & Execution Order
+
+### Chapter Dependencies
+
+-   Chapters can be worked on in parallel by different authors.
+
+### Lesson Dependencies
+
+-   Lessons within a chapter should ideally be completed in order, but can be worked on in parallel if the content is not strictly sequential.
 
 ---
 
 ## Implementation Strategy
+
+### Incremental Delivery
+
+1.  Complete Chapter 1, Lesson 1.
+2.  Review and validate the content.
+3.  Proceed to the next lesson or chapter.
+
+### Parallel Team Strategy
+
+With multiple authors:
+
+1.  Assign chapters to different authors.
+2.  Authors can work on lessons within their assigned chapters in parallel.
+3.  Regularly sync to ensure consistency in style and terminology.
+
 
 ### MVP First (User Story 1 Only)
 
