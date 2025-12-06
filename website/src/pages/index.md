@@ -16,7 +16,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
           Physical AI & Humanoid Robotics
         </h1>
         <p className="hero__subtitle">
-          Colearning Agentic AI with Python and TypeScript – Spec Driven Reusable Intelligence
+          A practical guide to designing, building, and programming humanoid robots using AI, with reusable, spec-driven intelligence patterns in Python and TypeScript.
         </p>
         <div className="hero-buttons">
           <a
