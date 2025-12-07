@@ -93,7 +93,7 @@ const config: Config = {
           label: 'Book',
         },
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/12SubhaAhmed/hackathon-2025',
           label: 'GitHub',
           position: 'right',
         },
