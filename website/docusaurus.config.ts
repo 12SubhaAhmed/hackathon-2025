@@ -21,19 +21,19 @@ const config: Config = {
   baseUrl: '/',
 
   // Add a redirect for the root path
-  plugins: [
-    [
-      '@docusaurus/plugin-client-redirects',
-      {
-        redirects: [
-          {
-            to: '/docs/chapter-1/lesson-1',
-            from: '/',
-          },
-        ],
-      },
-    ],
-  ],
+  // plugins: [
+  //   [
+  //     '@docusaurus/plugin-client-redirects',
+  //     {
+  //       redirects: [
+  //         {
+  //           to: '/docs/chapter-1/lesson-1',
+  //           from: '/',
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // ],
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
