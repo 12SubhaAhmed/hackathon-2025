@@ -1,4 +1,5 @@
 {
+  "root": "website",
   "buildCommand": "npm run build",
   "outputDirectory": "build"
 }
