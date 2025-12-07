@@ -9,5 +9,11 @@
         "root": "website"
       }
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
+    }
   ]
 }
