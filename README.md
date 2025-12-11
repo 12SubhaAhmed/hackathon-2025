@@ -1,1 +1,1 @@
-# nextjs_website
+I created an AI-powered book on "Physical AI & Humanoid Robotics". The book was generated using the Gemini CLI with Speckit for structured content creation and Docusaurus to build a professional, interactive documentation-style website. This setup allows for automated chapter generation, organized lessons, and a clean, navigable reading experience.
