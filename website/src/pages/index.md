@@ -19,12 +19,16 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
           A practical guide to designing, building, and programming humanoid robots using AI, with reusable, spec-driven intelligence patterns in Python and TypeScript.
         </p>
         <div className="hero-buttons">
-          <a
-            className="button button--secondary button--lg"
-            href={useBaseUrl('/docs/chapter-1/lesson-1')}>
-            Start Reading
-          </a>
-        </div>
+                      <a
+                      className="button button--secondary button--lg"
+                      href={useBaseUrl('/docs/chapter-1/lesson-1')}>
+                      Start Reading ✨
+                    </a>
+                    <a
+                      className="button--ask-me button--primary button--lg margin-left--md"
+                      href={useBaseUrl('/docs/chatbot-page')}>
+                      Ask me 🤖
+                    </a></div>
       </div>
     </div>
   </div>
