@@ -16,7 +16,7 @@ export default function Chatbot(): JSX.Element {
   const API_ENDPOINT =
     process.env.NODE_ENV === 'development'
       ? 'http://localhost:8000/ask'
-      : '/api/ask';
+      : 'YOUR_RAILWAY_BACKEND_URL/ask'; // Placeholder for Railway URL
 
   const handleSendMessage = async () => {
     if (input.trim() === '' || isLoading) return; 

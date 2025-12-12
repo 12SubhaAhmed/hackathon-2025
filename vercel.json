@@ -7,24 +7,12 @@
       "config": {
         "distDir": "build"
       }
-    },
-    {
-      "src": "api/ask.py",
-      "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "15mb",
-        "runtime": "python3.9"
-      }
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/api/(.*)",
-      "dest": "/api/ask.py"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/website/build/$1"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
