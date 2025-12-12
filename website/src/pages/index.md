@@ -26,8 +26,8 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
                     </a>
                     <a
                       className="button--ask-me button--primary button--lg margin-left--md"
-                      href={useBaseUrl('/docs/chatbot-page')}>
-                      Ask me 🤖
+                      href={useBaseUrl('/docs/chatbot-page/')}>
+                      AI Assistant 🤖
                     </a></div>
       </div>
     </div>

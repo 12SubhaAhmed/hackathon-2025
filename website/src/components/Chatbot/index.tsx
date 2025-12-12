@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, JSX } from 'react';
+import React, { useState, useEffect, useRef, JSX} from 'react';
 import styles from './styles.module.css'; 
 
 interface Message {
@@ -10,46 +10,13 @@ interface Message {
 export default function Chatbot(): JSX.Element {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState<string>('');
-  const [isLoading, setIsLoading] = useState<boolean>(false); 
-  const [isUserScrolling, setIsUserScrolling] = useState<boolean>(false); 
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const messagesContainerRef = useRef<HTMLDivElement>(null); 
-  const API_ENDPOINT = 'http://localhost:8000/ask'; 
-
-  const scrollToBottom = () => {
-    if (messagesContainerRef.current) {
-      const { scrollHeight, clientHeight, scrollTop } = messagesContainerRef.current;
-      const isAtBottom = scrollHeight - scrollTop <= clientHeight + 50; 
-
-      if (isAtBottom && messagesEndRef.current) {
-        messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  };
-
-  useEffect(() => {
-
-    if (!isUserScrolling) {
-      const timer = setTimeout(() => {
-        scrollToBottom();
-      }, 100); 
-      return () => clearTimeout(timer);
-    }
-  }, [messages, isUserScrolling]); 
-
-  // Handle manual scrolling to detect if user has scrolled up
-  const handleScroll = () => {
-    if (messagesContainerRef.current) {
-      const { scrollTop, scrollHeight, clientHeight } = messagesContainerRef.current;
-      const isAtBottom = scrollHeight - scrollTop <= clientHeight + 50;
-
-      if (!isAtBottom && !isUserScrolling) {
-        setIsUserScrolling(true);
-      } else if (isAtBottom && isUserScrolling) {
-        setIsUserScrolling(false);
-      }
-    }
-  };
+  const messagesContainerRef = useRef<HTMLDivElement>(null);
+  const API_ENDPOINT =
+    process.env.NODE_ENV === 'development'
+      ? 'http://localhost:8000/ask'
+      : '/api/ask';
 
   const handleSendMessage = async () => {
     if (input.trim() === '' || isLoading) return; 
@@ -94,7 +61,7 @@ export default function Chatbot(): JSX.Element {
 
   return (
     <div className={styles.chatbotContainer}>
-      <div className={styles.messagesContainer} ref={messagesContainerRef} onScroll={handleScroll}>
+      <div className={styles.messagesContainer} ref={messagesContainerRef}>
         {messages.map((message) => (
           <div key={message.id} className={`${styles.message} ${styles[message.sender]}`}>
             {message.text}

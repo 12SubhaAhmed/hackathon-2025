@@ -94,7 +94,7 @@ const config: Config = {
         },
         {
           type: 'doc',
-          docId: 'chatbot-page', // This refers to website/docs/chatbot-page.mdx
+          docId: 'chatbot-page', 
           position: 'left',
           label: 'Chatbot',
         },

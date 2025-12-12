@@ -7,12 +7,20 @@
       "config": {
         "distDir": "build"
       }
+    },
+    {
+      "src": "api/ask.py",
+      "use": "@vercel/python"
     }
   ],
-  "rewrites": [
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "/api/(.*)",
+      "dest": "/api/ask.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/website/build/$1"
     }
   ]
 }

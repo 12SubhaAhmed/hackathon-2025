@@ -115,3 +115,53 @@
     transform: scale(1);
   }
 }
+
+/* Dark mode specific styles for chatbot */
+[data-theme='dark'] .chatbotContainer {
+  background-color: white;
+  border-color: #e0e0e0; /* Light gray border for contrast */
+}
+
+[data-theme='dark'] .messagesContainer {
+  background-color: white;
+}
+
+[data-theme='dark'] .inputContainer {
+  background-color: white;
+  border-top-color: #e0e0e0;
+}
+
+[data-theme='dark'] .inputField {
+  background-color: white;
+  color: black;
+  border-color: #bdbdbd; /* Slightly darker gray for input border */
+}
+
+[data-theme='dark'] .inputField:focus {
+  border-color: #616161; /* Darker border on focus */
+  box-shadow: 0 0 0 2px rgba(97, 97, 97, 0.5); /* Matching shadow */
+}
+
+[data-theme='dark'] .sendButton {
+  background-color: #616161; /* Dark gray for button */
+  color: white;
+}
+
+[data-theme='dark'] .sendButton:hover {
+  background-color: #424242; /* Even darker gray on hover */
+}
+
+[data-theme='dark'] .message.user {
+  background-color: #424242; /* Darker bubble for user */
+  color: white;
+}
+
+[data-theme='dark'] .message.bot {
+  background-color: #e0e0e0; /* Light gray bubble for bot */
+  color: black;
+}
+
+[data-theme='dark'] .thinkingMessage {
+  background-color: #e0e0e0;
+  color: black;
+}
