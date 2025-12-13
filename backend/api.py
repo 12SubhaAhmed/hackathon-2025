@@ -22,3 +22,4 @@ async def ask_question(q: Question):
     return {
         "answer": result.get("answer", "I don't know")
     }
+
