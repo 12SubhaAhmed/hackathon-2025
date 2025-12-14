@@ -7,7 +7,11 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://hackathon-2025-h446byllo-subha-sajjads-projects.vercel.app"],      
+    allow_origins=[
+    "http://localhost:3000",
+    "http://localhost:5173",
+    "https://hackathon-2025-dc7z869zd-subha-sajjads-projects.vercel.app"
+    ],      
     allow_methods=["*"],
     allow_headers=["*"],
 )

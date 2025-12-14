@@ -1,9 +1,10 @@
---- 
+---
 title: Home
 hide_table_of_contents: true
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Chatbot from '@site/src/components/Chatbot';
 
 <header className="hero hero--primary homepage-hero">
   <div className="container">
@@ -24,11 +25,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
                       href={useBaseUrl('/docs/chapter-1/lesson-1')}>
                       Start Reading ✨
                     </a>
-                    <a
-                      className="button--ask-me button--primary button--lg margin-left--md"
-                      href={useBaseUrl('/docs/chatbot-page/')}>
-                      AI Assistant 🤖
-                    </a></div>
+                    </div>
       </div>
     </div>
   </div>
@@ -84,3 +81,5 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
     </div>
   </section>
 </main>
+
+<Chatbot />

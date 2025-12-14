@@ -92,12 +92,7 @@ const config: Config = {
           position: 'left',
           label: 'Book',
         },
-        {
-          type: 'doc',
-          docId: 'chatbot-page', 
-          position: 'left',
-          label: 'Chatbot',
-        },
+
         {
           href: 'https://github.com/12SubhaAhmed/hackathon-2025',
           label: 'GitHub',

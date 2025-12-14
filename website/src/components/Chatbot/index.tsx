@@ -11,12 +11,20 @@ export default function Chatbot(): JSX.Element {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState<string>('');
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false); // State to toggle chatbot visibility
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const messagesContainerRef = useRef<HTMLDivElement>(null);
   const API_ENDPOINT =
     process.env.NODE_ENV === 'development'
       ? 'http://localhost:8000/ask'
       : 'https://humanoid-backend-production.up.railway.app/ask'; // Placeholder for Railway URL
+
+  // Scroll to the latest message whenever messages update and chatbot is open
+  useEffect(() => {
+    if (isOpen && messagesEndRef.current) {
+      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [messages, isOpen]);
 
   const handleSendMessage = async () => {
     if (input.trim() === '' || isLoading) return; 
@@ -60,35 +68,55 @@ export default function Chatbot(): JSX.Element {
   };
 
   return (
-    <div className={styles.chatbotContainer}>
-      <div className={styles.messagesContainer} ref={messagesContainerRef}>
-        {messages.map((message) => (
-          <div key={message.id} className={`${styles.message} ${styles[message.sender]}`}>
-            {message.text}
+    <>
+      {/* Floating Chatbot Icon */}
+      <button 
+        className={styles.chatbotToggleButton} 
+        onClick={() => setIsOpen(!isOpen)}
+        aria-label="Toggle Chatbot"
+      >
+        {isOpen ? '✕' : '💬'} {/* Simple open/close indicator */}
+      </button>
+
+      {/* Chatbot Popup */}
+      {isOpen && (
+        <div className={styles.chatbotPopup}>
+          <div className={styles.chatbotContainer}>
+            <div className={styles.chatbotHeader}> {/* Add this header div */}
+              <h3>Chat with AI Assistant</h3>
+            </div>
+            <div className={styles.messagesContainer} ref={messagesContainerRef}>
+              {messages.map((message) => (
+                <div key={message.id} className={`${styles.message} ${styles[message.sender]}`}>
+                  {message.text}
+                </div>
+              ))}
+              <div ref={messagesEndRef} />
+              {isLoading && (
+                <div className={styles.thinkingMessage}>
+                  <div className={styles.thinkingDot} />
+                  <div className={styles.thinkingDot} />
+                  <div className={styles.thinkingDot} />
+                </div>
+              )}
+            </div>
+            <div className={styles.inputContainer}>
+              <input
+                type="text"
+                className={styles.inputField}
+                placeholder="Ask me anything..."
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                onKeyPress={handleKeyPress}
+              />
+              <button className={styles.sendButton} onClick={handleSendMessage}>
+                Send
+              </button>
+            </div>
           </div>
-        ))}
-        <div ref={messagesEndRef} />
-        {isLoading && (
-          <div className={styles.thinkingMessage}>
-            <div className={styles.thinkingDot} />
-            <div className={styles.thinkingDot} />
-            <div className={styles.thinkingDot} />
-          </div>
-        )}
-      </div>
-      <div className={styles.inputContainer}>
-        <input
-          type="text"
-          className={styles.inputField}
-          placeholder="Ask me anything..."
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          onKeyPress={handleKeyPress}
-        />
-        <button className={styles.sendButton} onClick={handleSendMessage}>
-          Send
-        </button>
-      </div>
-    </div>
+        </div>
+      )}
+    </>
   );
 }
+
